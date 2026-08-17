@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红外学习模式"
+            android:textColor="@color/learn_cyan"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用原装遥控器对着手机顶部学习"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 当前学习目标 -->
+        <TextView
+            android:id="@+id/tvCurrentTarget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择要学习的按键"
+            android:textColor="@color/learn_yellow"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@color/learn_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 按键选择区 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一步：选择要学习的按键"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <GridLayout
+            android:id="@+id/gridButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 学习操作区 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第二步：开始学习"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnStartLearn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="开始学习 (3秒)"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"
+            android:background="@drawable/btn_power"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/progressLearn"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- 状态显示 -->
+        <TextView
+            android:id="@+id/tvLearnStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="就绪"
+            android:textColor="@color/learn_green"
+            android:textSize="13sp"
+            android:background="@color/learn_bg"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 已学习状态一览 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已学习的按键"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvLearnedList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="暂无"
+            android:textColor="@color/learn_green"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:background="@color/learn_bg"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 手动输入区 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高级：手动输入红外原始码"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="格式: 频率,数据1,数据2,... (微秒)"
+            android:textColor="@color/text_gray"
+            android:textSize="11sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etManualCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="38000,3200,1700,500,1700,500,600,..."
+            android:textColor="@color/learn_green"
+            android:textColorHint="@color/text_gray"
+            android:textSize="11sp"
+            android:background="@color/learn_bg"
+            android:padding="8dp"
+            android:inputType="text"
+            android:singleLine="false"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnManualSave"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="保存到当前按键"
+                android:textColor="@color/text_white"
+                android:textSize="12sp"
+                android:background="@drawable/btn_round"
+                android:layout_marginRight="4dp" />
+
+            <Button
+                android:id="@+id/btnManualTest"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="测试发送"
+                android:textColor="@color/text_white"
+                android:textSize="12sp"
+                android:background="@drawable/btn_round" />
+        </LinearLayout>
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btnBackToControl"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="返回遥控器"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:background="@drawable/btn_round"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 调试日志 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="调试日志"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvLearnDebug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/learn_green"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:background="@color/learn_bg"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

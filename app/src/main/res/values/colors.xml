@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="haier_blue">#FF0066CC</color>
+    <color name="haier_dark_blue">#FF004488</color>
+    <color name="haier_light_blue">#FF3399FF</color>
+    <color name="bg_dark">#FF1A1A2E</color>
+    <color name="bg_card">#FF16213E</color>
+    <color name="bg_card_active">#FF0F3460</color>
+    <color name="text_white">#FFFFFFFF</color>
+    <color name="text_gray">#FFAAAAAA</color>
+    <color name="text_yellow">#FFFFD700</color>
+    <color name="btn_red">#FFCC3333</color>
+    <color name="btn_green">#FF2E7D32</color>
+    <color name="btn_bg">#FF2A2A4A</color>
+    <color name="btn_bg_pressed">#FF3A3A5A</color>
+    <color name="orange">#FFFF8800</color>
+    <color name="health_green">#FF4CAF50</color>
+    <color name="learn_red">#FFFF4444</color>
+    <color name="learn_green">#FF00FF66</color>
+    <color name="learn_bg">#FF0D0D1A</color>
+    <color name="learn_yellow">#FFFFFF00</color>
+    <color name="learn_cyan">#FF00FFFF</color>
+</resources>

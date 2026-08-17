@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- 标题栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/app_name" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" />
+
+            <ImageButton android:id="@+id/btnPower" android:layout_width="64dp" android:layout_height="64dp"
+                android:background="@drawable/btn_power" android:src="@android:drawable/ic_menu_close_clear_cancel" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/model_label" android:textColor="@color/text_gray" android:textSize="11sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- LED显示屏 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/display_bg" android:orientation="vertical"
+            android:padding="20dp" android:layout_marginBottom="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/tvStatus" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="@string/status_off" android:textColor="@color/text_gray" android:textSize="14sp" />
+                <TextView android:id="@+id/tvHealthStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/health_green" android:textSize="12sp" android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center" android:layout_marginTop="8dp" android:layout_marginBottom="8dp">
+                <TextView android:id="@+id/tvTemp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="--" android:textColor="@color/text_yellow" android:textSize="64sp" android:textStyle="bold" android:fontFamily="monospace" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="℃" android:textColor="@color/text_yellow" android:textSize="20sp" android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/tvMode" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="模式: --" android:textColor="@color/haier_light_blue" android:textSize="14sp" />
+                <TextView android:id="@+id/tvFanSpeed" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="风速: --" android:textColor="@color/haier_light_blue" android:textSize="14sp" />
+                <TextView android:id="@+id/tvTimer" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="" android:textColor="@color/orange" android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 温度 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <Button android:id="@+id/btnTempDown" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1"
+                android:text="@string/temp_down" android:textSize="18sp" android:textColor="@color/text_white" android:background="@drawable/btn_round" android:layout_marginRight="8dp" />
+            <Button android:id="@+id/btnTempUp" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1"
+                android:text="@string/temp_up" android:textSize="18sp" android:textColor="@color/text_white" android:background="@drawable/btn_round" />
+        </LinearLayout>
+
+        <!-- 模式 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="运行模式" android:textColor="@color/text_gray" android:textSize="14sp" android:layout_marginBottom="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <Button android:id="@+id/btnModeAuto" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/mode_auto" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" android:layout_marginRight="4dp" />
+            <Button android:id="@+id/btnModeCool" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/mode_cool" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" android:layout_marginRight="4dp" />
+            <Button android:id="@+id/btnModeFan" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/mode_fan" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" android:layout_marginRight="4dp" />
+            <Button android:id="@+id/btnModeDry" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/mode_dry" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" />
+        </LinearLayout>
+
+        <!-- 风速 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <Button android:id="@+id/btnFanCycle" android:layout_width="match_parent" android:layout_height="48dp" android:text="风速: 自动" android:textColor="@color/text_white" android:textSize="14sp" android:background="@drawable/btn_round" />
+        </LinearLayout>
+
+        <!-- 功能 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:layout_marginRight="8dp">
+                <Button android:id="@+id/btnHealth" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/health" android:textColor="@color/text_white" android:textSize="16sp" android:background="@drawable/btn_health" />
+                <TextView android:id="@+id/tvHealthIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="●" android:textColor="@color/text_gray" android:textSize="16sp" android:layout_marginTop="4dp" />
+            </LinearLayout>
+            <Button android:id="@+id/btnSwing" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_gravity="center_vertical" android:text="@string/swing" android:textColor="@color/text_white" android:textSize="16sp" android:background="@drawable/btn_round" android:layout_marginRight="8dp" />
+            <Button android:id="@+id/btnSleep" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_gravity="center_vertical" android:text="@string/sleep" android:textColor="@color/text_white" android:textSize="16sp" android:background="@drawable/btn_round" />
+        </LinearLayout>
+
+        <!-- 定时 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/display_bg" android:padding="16dp" android:layout_marginBottom="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/timer_set" android:textColor="@color/haier_light_blue" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="定时时间" android:textColor="@color/text_gray" android:textSize="14sp" android:layout_marginRight="8dp" />
+                <TextView android:id="@+id/tvTimerDisplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未设置" android:textColor="@color/orange" android:textSize="20sp" android:textStyle="bold" android:fontFamily="monospace" android:layout_weight="1" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="小时" android:textColor="@color/text_gray" android:textSize="14sp" />
+            </LinearLayout>
+            <SeekBar android:id="@+id/seekTimer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:max="24" android:progress="0" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnTimerOff" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="定时关机" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" android:layout_marginRight="8dp" />
+                <Button android:id="@+id/btnTimerCancel" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="@string/timer_cancel" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvTimerStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- 分隔线 -->
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF333355" android:layout_marginBottom="8dp" />
+
+        <!-- 运行日志 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▶ 运行日志（截图排查用）" android:textColor="@color/learn_cyan" android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp" />
+        <TextView android:id="@+id/tvProto" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="红外协议: 海尔A (9字节)　点击切换" android:textColor="@color/orange" android:textSize="12sp" android:padding="4dp" android:layout_marginBottom="4dp" />
+        <TextView android:id="@+id/tvDebug" android:layout_width="match_parent" android:layout_height="320dp" android:text="" android:textColor="#FF00FF66" android:textSize="11sp" android:fontFamily="monospace" android:background="#FF0D0D1A" android:padding="10dp"  android:scrollbars="vertical" android:layout_marginBottom="8dp" />
+        <Button android:id="@+id/btnTestIR" android:layout_width="match_parent" android:layout_height="40dp" android:text="清空日志" android:textColor="@color/text_white" android:textSize="13sp" android:background="@drawable/btn_round" android:layout_marginBottom="8dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Haier Smart Home v9.0" android:textColor="@color/haier_blue" android:textSize="12sp" android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

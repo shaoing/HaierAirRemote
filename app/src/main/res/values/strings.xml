@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">海尔空调遥控器</string>
+    <string name="model_label">适配型号: KF-35GW/06NCA12</string>
+    <string name="power">开/关</string>
+    <string name="mode">模式</string>
+    <string name="temp_up">温度+</string>
+    <string name="temp_down">温度-</string>
+    <string name="fan_speed">风速</string>
+    <string name="swing">扫风</string>
+    <string name="timer">定时</string>
+    <string name="health">健康</string>
+    <string name="sleep">睡眠</string>
+    <string name="mode_cool">制冷</string>
+    <string name="mode_heat">制热</string>
+    <string name="mode_fan">送风</string>
+    <string name="mode_dry">除湿</string>
+    <string name="mode_auto">自动</string>
+    <string name="fan_low">低速</string>
+    <string name="fan_mid">中速</string>
+    <string name="fan_high">高速</string>
+    <string name="fan_auto">自动</string>
+    <string name="status_on">运行中</string>
+    <string name="status_off">已关机</string>
+    <string name="timer_off">定时关</string>
+    <string name="timer_on">定时开</string>
+    <string name="health_on">健康模式 已开启</string>
+    <string name="health_off">健康模式 已关闭</string>
+    <string name="timer_set">定时设置</string>
+    <string name="timer_cancel">取消定时</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="swing_on">扫风 已开启</string>
+    <string name="swing_off">扫风 已关闭</string>
+    <string name="sleep_on">睡眠模式 已开启</string>
+    <string name="sleep_off">睡眠模式 已关闭</string>
+</resources>

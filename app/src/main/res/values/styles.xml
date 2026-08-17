@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">@color/haier_blue</item>
+        <item name="android:colorPrimaryDark">@color/haier_dark_blue</item>
+        <item name="android:colorAccent">@color/haier_light_blue</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/haier_blue</item>
+        <item name="android:textColorPrimary">@color/text_white</item>
+    </style>
+</resources>
