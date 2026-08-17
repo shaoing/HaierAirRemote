@@ -54,7 +54,7 @@ public class HaierAC {
         switch (m) { case M_COOL: return 1; case M_HEAT: return 3; case M_FAN: return 4; case M_DRY: return 2; default: return 0; }
     }
     private static int mode14(int m) {
-        switch (m) { case M_COOL: return 1; case M_HEAT: return 4; case M_FAN: return 5; case M_DRY: return 2; default: return 0; }
+        switch (m) { case M_COOL: return 1; case M_HEAT: return 4; case M_FAN: return 6; case M_DRY: return 2; default: return 0; }
     }
     private static int fan9(int f) {
         switch (f) { case 1: return 3; case 2: return 2; case 3: return 1; default: return 0; }
